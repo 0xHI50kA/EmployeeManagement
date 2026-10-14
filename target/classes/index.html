@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">E</div>
+            <div>
+                <h2>Employify</h2>
+                <p>Management System</p>
+            </div>
+        </div>
+
+        <nav>
+            <a class="nav-link active" href="#dashboard">
+                <span>▦</span> Dashboard
+            </a>
+            <a class="nav-link" href="#employees">
+                <span>♙</span> Employees
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="status-dot"></div>
+            <div>
+                <strong>System Status</strong>
+                <small>Employee portal</small>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content" id="dashboard">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">WORKSPACE / OVERVIEW</p>
+                <h1>Employee Dashboard</h1>
+                <p class="subtitle">Manage your team and employee records.</p>
+            </div>
+            <div class="admin-badge">
+                <div class="avatar">AD</div>
+                <div>
+                    <strong>Administrator</strong>
+                    <small>HR Management</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <div class="stat-icon purple">♙</div>
+                <p>Total Employees</p>
+                <h2 id="totalEmployees">0</h2>
+                <small>Employee records in database</small>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon blue">▤</div>
+                <p>Departments</p>
+                <h2 id="totalDepartments">0</h2>
+                <small>Unique departments</small>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon green">✓</div>
+                <p>Database</p>
+                <h2 class="connection-label" id="connectionStatus">Checking</h2>
+                <small>Java API connection</small>
+            </article>
+        </section>
+
+        <section class="employees-section" id="employees">
+            <div class="section-heading">
+                <div>
+                    <h2>Employee Records</h2>
+                    <p>View and manage employee information.</p>
+                </div>
+                <button class="primary-button" id="addEmployeeBtn">
+                    <span>＋</span> Add Employee
+                </button>
+            </div>
+
+            <div class="toolbar">
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input id="searchInput" type="search"
+                           placeholder="Search name, email, department...">
+                </div>
+                <button class="secondary-button" id="refreshBtn">↻ Refresh</button>
+            </div>
+
+            <div id="message" class="message hidden" role="status"></div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>EMPLOYEE</th>
+                            <th>DEPARTMENT</th>
+                            <th>POSITION</th>
+                            <th>SALARY</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeeTableBody">
+                        <tr>
+                            <td colspan="6" class="empty-state">
+                                Loading employee records...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-footer">
+                <span id="recordCount">Showing 0 employees</span>
+                <span>Employee Management System</span>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <span>Employify © 2026</span>
+            <span>Employee Management System</span>
+        </footer>
+    </main>
+
+    <dialog id="employeeDialog">
+        <form id="employeeForm">
+            <div class="modal-header">
+                <div>
+                    <p class="eyebrow">EMPLOYEE INFORMATION</p>
+                    <h2 id="dialogTitle">Add Employee</h2>
+                </div>
+                <button type="button" class="close-button"
+                        id="closeDialogBtn" aria-label="Close">×</button>
+            </div>
+
+            <input type="hidden" id="employeeId">
+
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text"
+                   maxlength="100" required placeholder="Enter full name">
+
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email"
+                   maxlength="120" required placeholder="name@example.com">
+
+            <label for="department">Department</label>
+            <input id="department" name="department" type="text"
+                   maxlength="100" required placeholder="e.g. IT">
+
+            <label for="position">Position</label>
+            <input id="position" name="position" type="text"
+                   maxlength="100" required placeholder="e.g. Developer">
+
+            <label for="salary">Monthly Salary (₱)</label>
+            <input id="salary" name="salary" type="number"
+                   min="0" step="0.01" required placeholder="25000">
+
+            <div class="modal-actions">
+                <button type="button" class="secondary-button"
+                        id="cancelBtn">Cancel</button>
+                <button type="submit" class="primary-button" id="saveBtn">
+                    Save Employee
+                </button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
