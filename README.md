@@ -178,11 +178,11 @@ docs/
     └── employee-form.png
 ```
 
-Once you add these images to your repository, you can display them below:
+<!-- Once you add these images to your repository, you can display them below:
 
 ```markdown
 ![Employify Dashboard](docs/screenshots/dashboard.png)
-```
+``` -->
 
 ## 🔒 Security Notes
 
@@ -217,7 +217,7 @@ This project demonstrates experience with:
 - [ ] Employee profile and department management
 - [ ] Automated unit and integration tests
 - [ ] Production deployment with secure configuration
-
+<!-- 
 ## 👨‍💻 Author
 
 **Your Name**
@@ -228,7 +228,7 @@ Aspiring Software Developer | Java Backend Development | Web Development
 - Portfolio: Add your portfolio URL here
 - Email: Add your professional contact email here
 
----
+--- -->
 
 <p align="center">
   Built with ☕ Java and 💙 a passion for learning and building software.
