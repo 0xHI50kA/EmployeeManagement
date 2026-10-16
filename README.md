@@ -178,11 +178,11 @@ docs/
     └── employee-form.png
 ```
 
-<!-- Once you add these images to your repository, you can display them below:
+Once you add these images to your repository, you can display them below:
 
 ```markdown
 ![Employify Dashboard](docs/screenshots/dashboard.png)
-``` -->
+```
 
 ## 🔒 Security Notes
 
