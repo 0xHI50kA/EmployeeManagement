@@ -166,24 +166,7 @@ The system manages employee details such as:
 - Position
 - Salary
 
-## 🖥️ Screenshots
 
-Add screenshots of your working application here to showcase the interface.
-
-```text
-docs/
-└── screenshots/
-    ├── dashboard.png
-    ├── employee-list.png
-    └── employee-form.png
-```
-
-Once you add these images to your repository, you can display them below:
-
-```markdown
-![Employify Dashboard](docs/screenshots/dashboard.png)
-```
-![Employify Dashboard](/docs/screenshots/dashboard.PNG)
 
 ## 🔒 Security Notes
 
