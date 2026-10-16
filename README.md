@@ -183,7 +183,7 @@ Once you add these images to your repository, you can display them below:
 ```markdown
 ![Employify Dashboard](docs/screenshots/dashboard.png)
 ```
-![Employify Dashboard](docs/screenshots/dashboard.PNG)
+![Employify Dashboard](./docs/screenshots/dashboard.PNG)
 
 ## 🔒 Security Notes
 
